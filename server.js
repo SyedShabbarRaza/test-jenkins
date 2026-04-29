@@ -8,7 +8,7 @@ const version = '1.0.0';
 app.get('/', (req, res) => {
     // set response content    
     res.sendFile(__dirname + "/html/index.html"); 
-    console.log(`[Version ${version}]: New request => http://${hostname}:${port}`+req.url);
+    console.log(`[Version ${version}]: New requests => http://${hostname}:${port}`+req.url);
 
 })
 

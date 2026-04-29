@@ -35,9 +35,11 @@ pipeline {
 
          stage("Send Email Notification") {
             steps {
-                mail to: "${EMAIL}",
-                     subject: "Jenkins Pipeline Success",
-                     body: "Your Application is running on http://15.206.158.146:${PORT}/"
+                emailext(
+                    subject: "Jenkins Pipeline Success",
+                    body: "Your Application is running on http://13.201.49.39:${PORT}/",
+                    to: "${EMAIL}"
+                )
             }
         }
 } 
